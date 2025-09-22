@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATM Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body class="bg-light">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">ATM System</a>
+            <button class="btn btn-danger" id="logoutBtn">Logout</button>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <div class="row g-4">
+            <div class="col-md-6">
+                <div class="card p-3 shadow">
+                    <h4>Balance</h4>
+                    <p>Your Balance: <span id="balance">0</span></p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card p-3 shadow">
+                    <h4>Deposit</h4>
+                    <input type="number" id="depositAmount" class="form-control mb-2" placeholder="Enter Amount">
+                    <button class="btn btn-success w-100" id="depositBtn">Deposit</button>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card p-3 shadow">
+                    <h4>Withdraw</h4>
+                    <input type="number" id="withdrawAmount" class="form-control mb-2" placeholder="Enter Amount">
+                    <button class="btn btn-warning w-100" id="withdrawBtn">Withdraw</button>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card p-3 shadow">
+                    <h4>Transactions</h4>
+                    <ul id="transactionList" class="list-group"></ul>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card p-3 shadow">
+                    <h4>Balance Enquiry</h4>
+                    <button class="btn btn-info w-100 mb-2" id="balanceEnquiryBtn">Check Balance</button>
+                    <p>Your Balance: <span id="balanceEnquiry">0</span></p>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="card p-3 shadow">
+                    <h4>Print Statement</h4>
+                    <button class="btn btn-secondary w-100 mb-2" id="printStatementBtn">Print Statement</button>
+                    <ul id="statementList" class="list-group"></ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>
